@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Métodos numéricos Factorización LU, Gauss Seidel y Jacobi</title>
+    <link href="inf.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('ecu lin.jpg');
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #222;
+            padding: 20px;
+        }
+        header {
+            background-color: blueviolet;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .container {
+            background-color: darkgreen;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            padding: 10px 15px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            color: white;
+        }
+        .cont1, .cont2, .cont3, .cont4, .cont5, .cont6 {
+            background-color: aqua;
+            border-radius: 6px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        .question {
+            background-color: #7fdbff;
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            background-color: #d0f0ff;
+            padding: 10px;
+            border-left: 4px solid #0080ff;
+            border-radius: 0 5px 5px 5px;
+        }
+        .container2, .container3 {
+            background-color: darkgreen;
+            max-width: 900px;
+            margin: 10px auto;
+            padding: 10px 15px;
+            border-radius: 6px;
+            color: white;
+        }
+        .cont66 {
+            background-color: rgb(98, 230, 230);
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            color: #222;
+        }
+        a {
+            display: block;
+            margin: 0 auto 15px auto;
+            max-width: 90%;
+            text-align: center;
+        }
+        a img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        INFORMACIÓN ACERCA DE LOS MÉTODOS NUMÉRICOS Y SUS APLICACIONES (FACTORIZACIÓN LU; GAUSS SEIDEL Y JACOBI)
+    </header>
+
+    <div class="container">
+        <div class="cont1">
+            <div class="question">¿QUÉ ES LA FACTORIZACIÓN LU?</div>
+            <div class="answer">
+                <p>Es un proceso que descompone una matriz cuadrada en el producto de dos matrices triangulares: una matriz triangular inferior (L) y una matriz triangular superior (U). Esta descomposición se utiliza para resolver sistemas de ecuaciones lineales de forma eficiente y para realizar otras operaciones matriciales, como calcular determinantes o inversas.</p>
+                <p>La factorización LU, en esencia, consiste en encontrar dos matrices, L y U, tales que:</p>
+                <ul>
+                    <li>A = LU, donde A es la matriz original que se desea factorizar.</li>
+                    <li>L es una matriz triangular inferior, lo que significa que todos los elementos por encima de la diagonal principal son cero.</li>
+                    <li>U es una matriz triangular superior, lo que significa que todos los elementos por debajo de la diagonal principal son cero.</li>
+                </ul>
+                <p>APLICACIONES</p>
+                <ul>
+                    <li>RESOLUCIÓN DE SISTEMAS DE ECUACIONES LINEALES
+                        <p>Permite resolver sistemas de ecuaciones de la forma Ax = b de forma más eficiente que otros métodos.</p>
+                    </li>
+                    <li>CÁLCULO DE DETERMINANTES
+                        <p>Facilita el cálculo del determinante de una matriz.</p>
+                    </li>
+                    <li>CÁLCULO DE INVERSAS
+                        <p>Puede utilizarse para encontrar la inversa de una matriz.</p>
+                    </li>
+                    <li>ANÁLISIS NUMÉRICOS
+                        <p>Es un componente importante en algoritmos numéricos para resolver sistemas de ecuaciones y otras tareas relacionadas con matrices.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cont2">
+            <div class="question">¿QUÉ ES EL MÉTODO DE JACOBI?</div>
+            <div class="answer">
+                <p>El método de Jacobi es un algoritmo iterativo utilizado para resolver sistemas de ecuaciones lineales...</p>
+                <ul>
+                    <li>Se toma un sistema de ecuaciones lineales en forma matricial Ax = b, donde A es la matriz de coeficientes, x es el vector de incógnitas y b es el vector de constantes.</li>
+                    <li>Se despeja cada variable xi en función de las demás variables y del vector b.</li>
+                    <li>Se inicia con una estimación inicial para el vector x (x0), y se calcula una nueva aproximación (x1) usando las ecuaciones despejadas...</li>
+                    <li>El método converge a la solución del sistema si la matriz A es diagonalmente dominante...</li>
+                </ul>
+                <p>En resumen: El método de Jacobi es un método iterativo para resolver sistemas de ecuaciones lineales...</p>
+            </div>
+        </div>
+
+        <div class="cont3">
+            <div class="question">¿QUÉ ES EL MÉTODO DE GAUSS-SEIDEL?</div>
+            <div class="answer">
+                <p>El método de Gauss-Seidel es un algoritmo iterativo utilizado para resolver sistemas de ecuaciones lineales...</p>
+                <ul>
+                    <li>Se reorganiza el sistema de ecuaciones para que la matriz de coeficientes sea diagonalmente dominante...</li>
+                    <li>Se despeja cada incógnita en su respectiva ecuación...</li>
+                    <li>En el criterio de convergencia, el proceso se detiene cuando la diferencia entre los valores de las incógnitas en dos iteraciones consecutivas es menor que un valor predefinido...</li>
+                </ul>
+                <p>En resumen, el método de Gauss-Seidel es un método iterativo eficaz para resolver sistemas de ecuaciones lineales...</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="met num.png" target="_blank" rel="noopener">
+        <img src="met num.png" alt="Métodos numéricos descritos" />
+    </a>
+
+    <div class="container2">
+        <p>La factorización LU es la solución numérica más precisa para el sistema dado, mientras que Gauss-Seidel es el método iterativo más eficiente para aproximar esa solución, y Jacobi es más lento pero conceptualmente sencillo. La elección depende del tamaño del sistema, la precisión requerida y la condición numérica de la matriz.</p>
+    </div>
+
+    <div class="container3">
+        <div class="cont4">
+            <div class="question">EXPLICACIÓN DE LAS GRÁFICAS QUE SE MOSTRARÁN EN MIS APLICACIONES APLICANDO LOS MÉTODOS NUMÉRICOS MENCIONADOS</div>
+            <div class="answer">
+                <p>La gráfica que se genera en el código para los métodos de Jacobi y Gauss-Seidel muestra la convergencia iterativa de cada variable del sistema de ecuaciones a lo largo de las iteraciones...</p>
+                <ul>
+                    <li>El eje horizontal representa el número de iteración...</li>
+                    <li>El eje vertical representa el valor aproximado de cada variable...</li>
+                    <li>Hay dos curvas para cada variable...</li>
+                    <li>Cada punto en la curva indica el valor de la variable en esa iteración.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cont5">
+            <div class="question">INTERPRETACIÓN PRÁCTICA</div>
+            <div class="answer">
+                <ul>
+                    <li>CONVERGENCIA</li>
+                    <p>Ambas curvas muestran cómo las soluciones iterativas se acercan a un valor estable...</p>
+                    <li>VELOCIDAD DE CONVERGENCIA</li>
+                    <p>Generalmente, la curva de Gauss-Seidel converge más rápido que la de Jacobi...</p>
+                    <li>COMPORTAMIENTO VARIABLE POR VARIABLE</li>
+                    <p>Cada variable puede converger a diferente velocidad...</p>
+                </ul>
+            </div>
+        </div>
+        <div class="cont6">
+            <div class="question">¿CÓMO CORREGIR O MITIGAR EL PROBLEMA DE UN SISTEMA MAL CONDICIONADO?</div>
+            <div class="answer">
+                <ul>
+                    <li>VERIFICAR LA PRECISIÓN DE LOS DATOS: Asegúrate que los coeficientes y términos independientes estén lo más precisos posible...</li>
+                    <li>ELIMINAR O MODIFICAR LAS ECUACIONES CASI LINEALMENTE DEPENDIENTES...</li>
+                    <li>AGREGAR MÁS ECUACIONES INDEPENDIENTES...</li>
+                    <li>USAR TÉCNICAS DE REGULARIZACIÓN...</li>
+                    <li>MÉTODOS ITERATIVOS CON PRECONDICIONAMIENTO...</li>
+                    <li>ANÁLISIS DE SENSIBILIDAD...</li>
+                </ul>
+                <div class="cont66">
+                    <p>Si el sistema es mal condicionado, las soluciones numéricas pueden no ser fiables para decisiones críticas...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(function(question) {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interacción Moleculares y Fármacos</title>
+    <link href="interacc.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: rgb(228, 145, 145);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #222;
+            padding: 20px;
+        }
+        header {
+            background-color: cadetblue;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .cont1, .cont2, .cont4 {
+            background-color: coral;
+            max-width: 900px;
+            margin: 15px auto;
+            border-radius: 6px;
+            padding: 10px 15px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        }
+        .question {
+            background-color: #f5b399;
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            background-color: #ffe5d1;
+            padding: 10px;
+            border-left: 4px solid #b35a00;
+            border-radius: 0 5px 5px 5px;
+        }
+        .cont3 {
+            max-width: 900px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .cont3 a img {
+            width: 30%;
+            height: auto;
+            margin: 0 1.5%;
+            border-radius: 6px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.3);
+            object-fit: cover;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        **********************INTERACCIÓN MOLECULAR Y FÁRMACOS**********************
+    </header>
+
+    <div class="cont1">
+        <div class="question">¿Cómo se aplican los métodos numéricos en el contexto del diseño de fármacos?</div>
+        <div class="answer">
+            <p>En el contexto del diseño de fármacos mediante la simulación de interacciones moleculares, los métodos numéricos como la factorización LU, Jacobi y Gauss-Seidel se aplican para resolver sistemas de ecuaciones lineales que modelan las fuerzas, energías o afinidades entre moléculas del fármaco y moléculas biológicas (receptores o dianas terapéuticas). Estas ecuaciones surgen al analizar cómo se unen o interactúan las moléculas a nivel atómico o molecular, lo que es fundamental para predecir la eficacia y estabilidad de un candidato a medicamento.</p>
+        </div>
+    </div>
+
+    <div class="cont2">
+        <div class="question">VENTAJAS DE LOS MÉTODOS NUMÉRICOS para esta aplicación del mundo real</div>
+        <div class="answer">
+            <div class="cont22">
+                <ul>
+                    <li>
+                        CAPACIDAD PARA RESOLVER SISTEMAS COMPLEJOS
+                        <p>Las interacciones moleculares generan sistemas lineales grandes y con múltiples variables. Los métodos numéricos permiten resolverlos con eficiencia y precisión, incluso cuando las soluciones analíticas no son factibles.</p>
+                    </li>
+                    <li>
+                        FACILITAN EL DISEÑO Y OPTIMIZACIÓN
+                        <p>Al obtener soluciones numéricas precisas, se puede ajustar y optimizar la estructura molecular para maximizar la afinidad y minimizar efectos secundarios, acelerando el proceso de diseño de fármacos.</p>
+                    </li>
+                    <li>
+                        INTEGRACIÓN CON TÉCNICAS COMPUTACIONALES AVANZADAS
+                        <p>Los métodos numéricos forman parte de herramientas computacionales más amplias, como modelado molecular, dinámica molecular y docking, que en conjunto mejoran la predicción y validación experimental.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="cont3">
+        <a href="diseño computacional new farmacos.jpg" target="_blank" rel="noopener">
+            <img src="diseño computacional new farmacos.jpg" alt="Diseño computacional de nuevos fármacos" />
+        </a>
+        <a href="diseño de farmacos por compu.jpg" target="_blank" rel="noopener">
+            <img src="diseño de farmacos por compu.jpg" alt="Diseño de farmacos por computadora" />
+        </a>
+        <a href="union azucar-adn diseña new farmacos.jpg" target="_blank" rel="noopener">
+            <img src="union azucar-adn diseña new farmacos.jpg" alt="Unión del azúcar con ADN para diseñar nuevos fármacos" />
+        </a>
+    </div>
+
+    <div class="cont4">
+        <div class="question">CONCLUSIONES</div>
+        <div class="answer">
+            <p>El uso de métodos numéricos para resolver sistemas lineales en el diseño de fármacos es una estrategia clave para entender y predecir las interacciones moleculares que determinan la eficacia terapéutica. Estas técnicas permiten manejar la complejidad inherente a los modelos moleculares, optimizar candidatos a medicamentos y acelerar el desarrollo farmacológico. En conjunto con otras metodologías computacionales y experimentales, los métodos numéricos contribuyen a un diseño más racional, eficiente y seguro de nuevos fármacos.</p>
+        </div>
+    </div>
+    
+    <div class="python-link" style="max-width: 900px; margin: 20px auto; text-align: center;">
+        <a href="https://colab.research.google.com/drive/13DYAardKMJHe4greXDu3idzohBoYWORP?usp=sharing" target="_blank" rel="noopener" class="btn">
+            Ejecutar Aplicación Python en Google Colab
+        </a>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(function(question) {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

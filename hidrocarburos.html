@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Identificación de Hidrocarburos</title>
+    <link href="hidroc.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: darkseagreen;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #222;
+            padding: 20px;
+        }
+        header {
+            background-color: cadetblue;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .cont1, .cont2, .cont3 {
+            background-color: darkkhaki;
+            max-width: 900px;
+            margin: 15px auto;
+            border-radius: 6px;
+            padding: 10px 15px;
+            box-shadow: 0 0 7px rgba(0,0,0,0.2);
+        }
+        .question {
+            background-color: #c4b45a;
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            background-color: #e6e1a1;
+            padding: 10px;
+            border-left: 4px solid #7a7400;
+            border-radius: 0 5px 5px 5px;
+        }
+        .cont4 {
+            max-width: 900px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .cont4 a img {
+            width: 30%;
+            height: auto;
+            margin: 0 1.5%;
+            border-radius: 6px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.3);
+            object-fit: cover;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        ****************************IDENTIFICACIÓN DE HIDROCARBUROS*****************************
+    </header>
+
+    <div class="cont1">
+        <div class="question">¿Cómo aplicar los métodos numéricos para este ejemplo de aplicación?</div>
+        <div class="answer">
+            <p>Para estimar la cantidad y ubicación de hidrocarburos en el subsuelo, se utilizan modelos matemáticos que generan sistemas de ecuaciones lineales representando propiedades geoeléctricas y geoquímicas del terreno. Estos sistemas se resuelven con métodos numéricos para interpretar datos de resistividad y concentración, facilitando la localización y cuantificación de contaminantes.</p>
+        </div>
+    </div>
+
+    <div class="cont2">
+        <div class="question">¿Cómo funciona este programa?</div>
+        <div class="answer">
+            <p>Este código simula la resolución de un sistema lineal que representa un modelo geoeléctrico para la identificación de hidrocarburos en el subsuelo. La matriz A modela las propiedades eléctricas y la interacción entre zonas del terreno, mientras que el vector b representa mediciones de resistividad o concentración.</p>
+        </div>
+    </div>
+
+    <div class="cont3">
+        <div class="question">¿Qué se espera obtener mediante la ejecución de este programa?</div>
+        <div class="answer">
+            <p>Este ejemplo es una base para simular y analizar la distribución de hidrocarburos en el subsuelo usando métodos numéricos, apoyando la toma de decisiones en exploración y remediación ambiental.</p>
+            <p>Esta simulación apoya la toma de decisiones en exploración ambiental y remediación, facilitando la localización y cuantificación de contaminantes hidrocarburíferos.</p>
+        </div>
+    </div>
+
+    <div class="cont4">
+        <a href="Campo-Sacha_hidrocarb.jpg" target="_blank" rel="noopener">
+            <img src="Campo-Sacha_hidrocarb.jpg" alt="Campo Sacha" />
+        </a>
+        <a href="refineria-petroleo_image.jpg" target="_blank" rel="noopener">
+            <img src="refineria-petroleo_image.jpg" alt="Refinería petrolífera" />
+        </a>
+        <a href="hidrocarburos.jpg" target="_blank" rel="noopener">
+            <img src="hidrocarburos.jpg" alt="Hidrocarburos" />
+        </a>
+    </div>
+    
+    <div class="python-link" style="max-width: 900px; margin: 20px auto; text-align: center;">
+        <a href="https://colab.research.google.com/drive/1XGtD2E7cM-twlu2hIBVc9JxgChHT4ik1?usp=sharing" target="_blank" rel="noopener" class="btn">
+            Ejecutar Aplicación Python en Google Colab
+        </a>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(function(question) {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
